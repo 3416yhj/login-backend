@@ -9,7 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 미들웨어 설정
-app.use(cors());
+app.use(cors({
+  origin: "https://apsi.netlify.app/login/login", // 또는 true (전체 허용)
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // 정적 파일 폴더
