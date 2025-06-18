@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 // 미들웨어 설정
 app.use(cors({
-  origin: "https://apsi.netlify.app/login/login", // 또는 true (전체 허용)
+  origin: true, // 또는 true (전체 허용)
   credentials: true
 }));
 app.use(express.json());
